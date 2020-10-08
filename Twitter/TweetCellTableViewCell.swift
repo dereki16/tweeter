@@ -15,7 +15,7 @@ class TweetCellTableViewCell: UITableViewCell {
     @IBOutlet weak var tweetContent: UILabel!
     
     @IBOutlet weak var retweetButton: UIButton!
-    @IBOutlet weak var favButton: UIButton!
+    @IBOutlet weak var favorButton: UIButton!
     
     @IBAction func favTweet(_ sender: Any) {
         let toBeFavorited = !favorited
@@ -57,10 +57,10 @@ class TweetCellTableViewCell: UITableViewCell {
     func setFavorite(_isFavorited:Bool) {
         favorited = _isFavorited
         if (favorited) {
-            favButton.setImage(UIImage(named:"favor-icon-red"), for: UIControl.State.normal)
+            favorButton.setImage(UIImage(named:"favor-icon-red"), for: UIControl.State.normal)
         }
         else {
-            favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
+            favorButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
         }
     }
     
